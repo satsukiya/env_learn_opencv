@@ -1,0 +1,13 @@
+version: '3'
+services:
+  env_opencv:
+    image: env_opencv_image
+    container_name: env_opencv_container
+    privileged: true
+    tty: true
+    stdin_open: true
+    command: /sbin/init
+    volumes:
+      - .:/var/src
+    ports:
+      - "9013:8036"
